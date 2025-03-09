@@ -19,12 +19,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "concurrently \"npm run build:studentshub-frontend\" \"npm run build:studentshub-backend\"",
-    "build:studentshub-frontend": "react-scripts build",
-    "build:studentshub-backend": "cd ../backend && npm run build",
+    "build": "react-scripts build,
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "both": "concurrently \"npm start\" \"cd ../studentshub-backend && npm start\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
