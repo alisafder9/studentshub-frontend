@@ -21,7 +21,7 @@ const StudentList = () => {
 
   useEffect(() => {
     const fetchStudents = async () => {
-      const response = await axios.get('http://localhost:5000/api/students/allstudents');
+      const response = await axios.get('https://studentshub-backend.vercel.app/api/students/allstudents');
       setStudents(response.data.students);
     };
 
@@ -32,7 +32,7 @@ const StudentList = () => {
 
   const searchStudents = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/students/search?query=${searchQuery}`);
+      const response = await axios.get(`https://studentshub-backend.vercel.app/api/students/search?query=${searchQuery}`);
       setStudents(response.data.students);
       setIsSearch(true);
     } catch (error) {
