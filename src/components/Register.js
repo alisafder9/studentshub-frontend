@@ -29,7 +29,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/register', { name, email, password, dob: formattedDob });
+      const response = await axios.post('https://studentshub-backend.vercel.app/api/users/register', { name, email, password, dob: formattedDob });
       console.log(response.data);
       setSuccess('User registered successfully!');
       setTimeout(() => navigate('/login'), 2000); // Redirect to login after successful registration
