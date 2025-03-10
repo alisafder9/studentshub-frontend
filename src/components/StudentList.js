@@ -116,7 +116,7 @@ const StudentList = ({ filters, filtersApplied }) => {
         style={{ width: '60%', height: '38px' }}
         className='mx-3'
       />
-      <div className="d-flex justify-content-between mt-2 mb-2 mx-3">
+      <div className="d-flex justify-content-between mb-2 mx-3">
         <div>
           <button className='btn btn-primary btn-search' onClick={searchStudents}>Search</button>
           <button className='mx-1 btn btn-secondary btn-reset' onClick={resetSearch}>Reset</button>
