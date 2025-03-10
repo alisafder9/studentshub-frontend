@@ -16,7 +16,7 @@ const StudentList = ({ filters, filtersApplied }) => {
 
   useEffect(() => {
     const fetchStudents = async () => {
-      const response = await axios.get('http://localhost:5000/api/students/allstudents');
+      const response = await axios.get('https://studentshub-frontend.vercel.app/api/students/allstudents');
       setStudents(response.data.students);
     };
 
@@ -27,7 +27,7 @@ const StudentList = ({ filters, filtersApplied }) => {
 
   const searchStudents = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/students/search?query=${searchQuery}`);
+      const response = await axios.get(`https://studentshub-frontend.vercel.app/api/students/search?query=${searchQuery}`);
       setStudents(response.data.students);
       setIsSearch(true);
     } catch (error) {
