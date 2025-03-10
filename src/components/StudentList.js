@@ -129,7 +129,6 @@ const StudentList = ({ filters, filtersApplied }) => {
             <option value={50}>50</option>
           </select>
         </div>
-
       </div>
       <div className="table-scrollable">
         <table className="table table-bordered table-hover">
@@ -155,30 +154,36 @@ const StudentList = ({ filters, filtersApplied }) => {
             </tr>
           </thead>
           <tbody className='table-black'>
-            {currentStudents.map((student, index) => (
-              <tr key={student.admission_no}>
-                <td>{offset + index + 1}</td>
-                <td>{student.admission_date.split('T')[0]}</td>
-                <td>{student.admission_no}</td>
-                <td>{student.name}</td>
-                <td>{student.father_name}</td>
-                <td>{student.dob.split('T')[0]}</td>
-                <td>{calculateAge(student.dob)}</td>
-                <td>{student.gender}</td>
-                <td>{student.grade}</td>
-                <td>{student.nationality}</td>
-                <td>{student.father_cnic}</td>
-                <td>{student.father_contact}</td>
-                <td>{student.address}</td>
-                <td>{student.status}</td>
-                <td>{student.slc}</td>
-                <td>{student.issue_date ? student.issue_date.split('T')[0] : ''}</td>
-                <td>
-                  <button className="mx-2 btn btn-warning btn-sm" onClick={() => handleUpdateClick(student)}>Update</button>
-                  <button className="btn btn-danger btn-sm" onClick={() => handleDeleteClick(student)}>Delete</button>
-                </td>
+            {currentStudents.length > 0 ? (
+              currentStudents.map((student, index) => (
+                <tr key={student.admission_no}>
+                  <td>{offset + index + 1}</td>
+                  <td>{student.admission_date.split('T')[0]}</td>
+                  <td>{student.admission_no}</td>
+                  <td>{student.name}</td>
+                  <td>{student.father_name}</td>
+                  <td>{student.dob.split('T')[0]}</td>
+                  <td>{calculateAge(student.dob)}</td>
+                  <td>{student.gender}</td>
+                  <td>{student.grade}</td>
+                  <td>{student.nationality}</td>
+                  <td>{student.father_cnic}</td>
+                  <td>{student.father_contact}</td>
+                  <td>{student.address}</td>
+                  <td>{student.status}</td>
+                  <td>{student.slc}</td>
+                  <td>{student.issue_date ? student.issue_date.split('T')[0] : ''}</td>
+                  <td>
+                    <button className="mx-2 btn btn-warning btn-sm" onClick={() => handleUpdateClick(student)}>Update</button>
+                    <button className="btn btn-danger btn-sm" onClick={() => handleDeleteClick(student)}>Delete</button>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="17" className="text-center">No records found</td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>
