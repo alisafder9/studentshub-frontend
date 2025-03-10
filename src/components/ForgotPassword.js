@@ -30,7 +30,7 @@ const ForgotPassword = () => {
 
         try {
             // Send POST request to backend to recover password
-            const response = await axios.post('http://localhost:5000/api/users/forgot-password', {
+            const response = await axios.post('https://studentshub-frontend.vercel.app/api/users/forgot-password', {
                 email,
                 dob,
             });
