@@ -122,7 +122,7 @@ const StudentList = ({ filters, filtersApplied }) => {
           <button className='mx-1 btn btn-secondary btn-reset' onClick={resetSearch}>Reset</button>
         </div>
         <div>
-          <label htmlFor="studentsPerPage" className='fw-medium fs-6 mx-1'>Students per page:</label>
+          <label htmlFor="studentsPerPage" className='fw-medium fs-6 mx-1'>Per page:</label>
           <select id="studentsPerPage" value={studentsPerPage} className='custom-perPage' onChange={handleStudentsPerPageChange}>
             <option value={10}>10</option>
             <option value={30}>30</option>
