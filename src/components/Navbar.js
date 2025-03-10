@@ -28,7 +28,7 @@ const NavbarComponent = ({ filters, onFilterChange, onApplyFilters }) => {
       try {
         const token = localStorage.getItem('token') || sessionStorage.getItem('token');
 
-        const response = await fetch(`http://localhost:5000/api/users/name?email=${email}`, {
+        const response = await fetch(`https://studentshub-frontend.vercel.app/api/users/name?email=${email}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
