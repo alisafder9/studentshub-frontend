@@ -293,7 +293,7 @@ const AddStudent = () => {
           </div>
         </div>
 
-        <button type="submit" className="btn btn-primary mb-3">Add Student</button>
+        <button type="submit" className="btn btn-primary mb-4">Add Student</button>
 
       </form>
 
