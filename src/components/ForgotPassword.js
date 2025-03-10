@@ -56,7 +56,7 @@ const ForgotPassword = () => {
 
     return (
         <div className="forgot-password-container"> {/* Add custom CSS class */}
-            <div className="container mt-5">
+            <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                         <div className="card">
