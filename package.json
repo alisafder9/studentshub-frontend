@@ -9,9 +9,9 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.8.1",
     "moment": "^2.30.1",
-    "react": "^19.0.0",
+    "react": "^18.2.0",
     "react-bootstrap": "^2.10.9",
-    "react-dom": "^19.0.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "react-paginate": "^8.3.0",
     "react-responsive": "^10.0.1",
@@ -21,12 +21,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "concurrently \"npm run build:studentshub-frontend\" \"npm run build:studentshub-backend\"",
-    "build:studentshub-frontend": "react-scripts build",
-    "build:studentshub-backend": "cd ../backend && npm run build",
+    "build": "react-script build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "both": "concurrently \"npm start\" \"cd ../studentshub-backend && npm start\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
