@@ -73,6 +73,5 @@ p{
 .active {
   background-color: #cad0d572; /* Change to your desired active background color */
   border-radius: 4px; /* Optional: Add some rounded corners */
-  padding: 5px 10px 5px 5px; /* Optional: Add some padding */
   width: fit-content;
 }
