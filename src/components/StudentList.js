@@ -119,7 +119,7 @@ const StudentList = ({ filters, filtersApplied }) => {
       <div className="d-flex justify-content-between mt-2 mb-2 mx-3">
         <div>
           <button className='btn btn-primary btn-search' onClick={searchStudents}>Search</button>
-          <button className='mx-2 btn btn-secondary btn-reset' onClick={resetSearch}>Reset</button>
+          <button className='mx-1 btn btn-secondary btn-reset' onClick={resetSearch}>Reset</button>
         </div>
         <div>
           <label htmlFor="studentsPerPage" className='fw-medium fs-6 mx-1'>Students per page:</label>
