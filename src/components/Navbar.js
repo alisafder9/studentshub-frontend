@@ -210,11 +210,10 @@ const NavbarComponent = ({ filters, onFilterChange, onApplyFilters }) => {
                   <Button variant="primary" onClick={handleApplyFilters} className="mt-2">
                     Apply Filters
                   </Button>
-                        <hr />
+                  <hr />
                 </div>
-                        )}
+                  )}
               </Nav>
-              <hr />
               <div className="d-flex-row mt-3">
                 <h6>Profile</h6>
                 <p className='bg-secondary p-2 rounded-3'>
