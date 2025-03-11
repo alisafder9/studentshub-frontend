@@ -181,7 +181,7 @@ const StudentList = ({ filters, filtersApplied }) => {
               ))
             ) : (
               <tr>
-                <td colSpan="17" className="text-center">No records found</td>
+                <td colSpan="17" className="fw-medium">No records found!</td>
               </tr>
             )}
           </tbody>
