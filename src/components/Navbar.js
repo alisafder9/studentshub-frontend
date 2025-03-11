@@ -88,7 +88,7 @@ const NavbarComponent = ({ filters, onFilterChange, onApplyFilters }) => {
                 </Nav.Link>
                 <hr />
                 {/* Conditionally render filters based on the current route */}
-                {location.pathname !== '/add-student' && location.pathname !== '/profile' && (
+                {(location.pathname !== '/add-student') && (location.pathname !== '/profile') && (
                   <div>
                     <h6>Filters</h6>
                     <div className="mt-3">
@@ -153,31 +153,30 @@ const NavbarComponent = ({ filters, onFilterChange, onApplyFilters }) => {
                         <option value="Inactive">Inactive</option>
                       </select>
                     </div>
-                    <Button variant="primary" onClick={handleApplyFilters} className="mt-2">
+                    <Button variant="primary" onClick={handleApplyFilters} className="mt-2 mb-3">
                       Apply Filters
                     </Button>
                     <hr />
                   </div>
                 )}
+                <div className="d-flex-row">
+                  {/* Replace "Welcome" with a NavLink to the profile page */}
+                  <Nav.Link
+                    as={NavLink}
+                    to="/profile"
+                    onClick={() => setShowOffcanvas(false)}
+                    className={({ isActive }) => isActive ? 'active' : ''}
+                  >
+                    <h6>
+                      <FaUser className="me-2" /> {/* Add User icon */}
+                      Profile
+                    </h6>
+                  </Nav.Link>
+                  <Button variant="success" onClick={handleLogout} disabled={logoutLoading} className='mt-3'>
+                    {logoutLoading ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> : 'Logout'}
+                  </Button>
+                </div>
               </Nav>
-              <div className="d-flex-row mt-3">
-                <h6>User</h6>
-                {/* Replace "Welcome" with a NavLink to the profile page */}
-                <Nav.Link
-                  as={NavLink}
-                  to="/profile"
-                  onClick={() => setShowOffcanvas(false)}
-                  className={({ isActive }) => isActive ? 'active' : ''}
-                >
-                  <h6>
-                    <FaUser className="me-2" /> {/* Add User icon */}
-                    Profile
-                  </h6>
-                </Nav.Link>
-                <Button variant="success" onClick={handleLogout} disabled={logoutLoading} className='mt-3'>
-                  {logoutLoading ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> : 'Logout'}
-                </Button>
-              </div>
             </Offcanvas.Body>
           </Offcanvas>
         </Container>
