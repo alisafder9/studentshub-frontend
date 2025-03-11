@@ -7,6 +7,7 @@ import AddStudent from './components/AddStudent';
 import StudentList from './components/StudentList'; // Assuming you have this component
 import NavbarComponent from './components/Navbar';
 import ForgotPassword from './components/ForgotPassword';
+import ProfilePage from './components/Profile';
 
 const getToken = () => {
   return localStorage.getItem('token') || sessionStorage.getItem('token');
@@ -76,6 +77,14 @@ const App = () => {
                 <StudentList filters={filters} filtersApplied={filtersApplied} />
               </PrivateRoute>
             }
+          />
+          <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <ProfilePage />
+            </PrivateRoute>
+          }
           />
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
