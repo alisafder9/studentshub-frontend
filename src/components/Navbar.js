@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -9,6 +9,7 @@ import { FaHome, FaUserPlus } from 'react-icons/fa'; // Import icons
 
 const NavbarComponent = ({ filters, onFilterChange, onApplyFilters }) => {
   const navigate = useNavigate();
+  const location = useLocation(); // Get the current location
   const token = localStorage.getItem('token') || sessionStorage.getItem('token');
   const [userName, setUserName] = useState('');
   const [loading, setLoading] = useState(true);
@@ -140,6 +141,8 @@ const NavbarComponent = ({ filters, onFilterChange, onApplyFilters }) => {
                   </h6>
                 </Nav.Link>
                 <hr />
+                {/* Conditionally render filters based on the current route */}
+                {location.pathname !== '/add-student' && (
                 <div>
                   <h6>Filters</h6>
                   <div className="mt-3">
@@ -207,7 +210,9 @@ const NavbarComponent = ({ filters, onFilterChange, onApplyFilters }) => {
                   <Button variant="primary" onClick={handleApplyFilters} className="mt-2">
                     Apply Filters
                   </Button>
+                        <hr />
                 </div>
+                        )}
               </Nav>
               <hr />
               <div className="d-flex-row mt-3">
