@@ -28,7 +28,7 @@ const ProfilePage = () => {
             }
 
             try {
-                const response = await fetch(`http://localhost:5000/api/users/profile?email=${email}`, {
+                const response = await fetch(`https://studentshub-backend.vercel.app/api/users/profile?email=${email}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -76,7 +76,7 @@ const ProfilePage = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/api/users/profile`, {
+            const response = await fetch(`https://studentshub-backend.vercel.app/api/users/profile`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
