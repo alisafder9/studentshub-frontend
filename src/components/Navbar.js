@@ -88,7 +88,7 @@ const NavbarComponent = ({ filters, onFilterChange, onApplyFilters }) => {
                 </Nav.Link>
                 <hr />
                 {/* Conditionally render filters based on the current route */}
-                {location.pathname !== '/add-student' && (
+                {location.pathname !== '/add-student' && location.pathname !== '/profile' && (
                   <div>
                     <h6>Filters</h6>
                     <div className="mt-3">
