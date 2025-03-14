@@ -37,7 +37,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/register', { name, email, password, dob: formattedDob });
+      const response = await axios.post('https://studentshub-backend.vercel.app/api/users/register', { name, email, password, dob: formattedDob });
       console.log(response.data);
       setSuccess('User registered successfully!');
       setLoading(false); // Reset loading to false after successful registration
