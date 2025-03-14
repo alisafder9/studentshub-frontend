@@ -21,7 +21,7 @@ const StudentList = ({ filters, filtersApplied }) => {
         // Assuming you have the token stored in localStorage or any other secure storage
         const token = localStorage.getItem('token') || sessionStorage.getItem('token'); 
   
-        const response = await axios.get('http://localhost:5000/api/students/allstudents', {
+        const response = await axios.get('https://studentshub-backend.vercel.app/api/students/allstudents', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -43,7 +43,7 @@ const StudentList = ({ filters, filtersApplied }) => {
     try {
       const token = localStorage.getItem('token') || sessionStorage.getItem('token');
       
-      const response = await axios.get(`http://localhost:5000/api/students/search?query=${searchQuery}`, {
+      const response = await axios.get(`https://studentshub-backend.vercel.app/api/students/search?query=${searchQuery}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
