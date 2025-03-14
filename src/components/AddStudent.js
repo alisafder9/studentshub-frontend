@@ -315,7 +315,7 @@ const AddStudent = () => {
           </div>
         </div>
 
-        <button type="submit" className="btn btn-primary">Add Student</button>
+        <button type="submit" className="btn btn-primary mb-5">Add Student</button>
 
       </form>
 
