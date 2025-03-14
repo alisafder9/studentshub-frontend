@@ -31,7 +31,7 @@ const BirthCertificate = () => {
         return;
       }
 
-      const response = await axios.get(`http://localhost:5000/api/students/birthcertificate?query=${admissionNo}`, {
+      const response = await axios.get(`https://studentshub-backend.vercel.app/api/students/birthcertificate?query=${admissionNo}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         }
