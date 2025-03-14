@@ -54,7 +54,7 @@ const AddStudent = () => {
 
       // Send POST request to backend to add student
       const response = await axios.post(
-        'http://localhost:5000/api/students/addstudent',
+        'https://studentshub-backend.vercel.app/api/students/addstudent',
         {
           admission_date: admissionDate,
           admission_no: admissionNo,
