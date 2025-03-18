@@ -158,7 +158,7 @@ const StudentList = ({ filters, filtersApplied }) => {
           </select>
         </div>
       </div>
-      <div className="table-scrollable mx-3">
+      <div className="table-scrollable mx-lg-3 mx-sm-0">
         <table className="table table-bordered table-hover">
           <thead className='table-dark'>
             <tr>
